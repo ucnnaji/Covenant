@@ -1,6 +1,6 @@
-import mysql.connector 
+import mysql.connector #library to facilitate connection to the dataset(Malaria)
 
-import time
+import time #library to enable access to the database one at a time
 
 mydb = mysql.connector.connect(
   host="127.0.0.1",
@@ -28,7 +28,7 @@ ind_Education_Average=[]
 ind_Education_Low=[]
 
 
-mycursor.execute("SELECT * FROM malaria WHERE Residence_Type='Urban'")
+mycursor.execute("SELECT * FROM malaria WHERE Residence_Type='Urban'") #query the dataset to fetch all records with value "Urban"
 
 Residence_Type_Urban = mycursor.fetchall()
 
